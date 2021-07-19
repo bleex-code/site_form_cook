@@ -1,7 +1,7 @@
-/* STYLE CSS */
+/* MOBILE SECTION */
 
 * {
-    overflow: auto;  
+    overflow: auto;
 }
 
 body {
@@ -10,42 +10,19 @@ body {
     margin: 0;
 }
 
-
 div.contenu {
     background-color: white;
-    margin: 60px 10% 80px 10%;
-    padding: 0px 30px 15px 30px;
-    min-width: 350px;
-    box-shadow: 0px 0px 15px #00000080;
+    margin: 40px 8px 40px 8px;
+    padding: 0px 8px 20px 8px;
+    box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);
     overflow: visible;
 }
-
-
-p.categorie {
-    background-color: black;
-    color: white;
-    display: inline-block;
-    margin-top: -15px;
-    margin-bottom: 0;
-    padding: 8px 18px;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-
-div.categorie {
-    margin-top: 0;
-    margin-bottom: 0;
-    overflow: visible;
-}
-
 
 h1 {
     text-align: center;
-    margin-top: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    margin-top: 10px;
 }
-
 
 p.description {
     text-align: center;
@@ -55,54 +32,62 @@ p.description {
     font-size: 14px;
 }
 
+/* Mon commentaire CSS */
 
 .centre {
     text-align: center;
     width: 100%;
 }
 
+p.categorie {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    margin-top: -15px;
+    padding: 8px 18px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+div.categorie {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    overflow: visible;
+}
 
 div.separateur {
     width: 100px;
     height: 1px;
-    text-align: center;
     background-color: black;
     margin-left: auto;
     margin-right: auto;
 }
 
-
 div.infos {
     position: relative;
 }
 
-
 table.infos {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    background-color: #6C829DC0;
-    height: 80px
+    position: absolute; 
+    bottom:0; 
+    width: 100%; 
+    color: white; 
+    background-color: #6C829DC0; 
+    height: 50px;
 }
-
-
-/* STYLE TABLE */
-table.infos th {
-    text-align: center;
-    font-size: 16px;
-    vertical-align: bottom;
-}
-
 
 table.infos td {
     text-align: center;
-    font-size: 13px;
-    margin: 0;
+    font-size: 12px;
     vertical-align: top;
-    padding-top: 10px;
 }
 
+table.infos th {
+    font-size: 14px;
+    vertical-align: bottom;
+    padding-bottom: 8px;
+}
 
 img.infos {
     display: block;
@@ -113,14 +98,15 @@ img.infos {
     overflow: visible;
 }
 
-
 div.colonne {
-    width: 45%;
+    width: 90%;
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
 div.colonne h2 {
+    position: right;
     text-align: center;
     text-transform: uppercase;
     font-size: 15px;
@@ -129,17 +115,9 @@ div.colonne h2 {
     margin-bottom: 20px;
 }
 
-
 div.colonne1 {
-    display: inline-block;
-    margin-right: 10%;
+    display: block;
 }
-
-
-div.colonne2 {
-    float: right;
-}
-
 
 div.ingredients p {
     text-align: center;
@@ -149,14 +127,6 @@ div.ingredients p {
     padding: 8px 0px;
     border: 1px solid lightgrey;
     box-shadow: 0px 0px 3px lightblue;
-}
-
-table.preparation tr {
-    margin: 30;
-    padding-top: 30;
-    vertical-align: top;
-    font-size: 14px;
-
 }
 
 table.preparation p.numero {
@@ -181,14 +151,63 @@ table.preparation td.preparation {
     height: 40px;
 }
 
-p.bon_appetit {
-    text-align: center;
-    vertical-align: bottom;
-    font-size: 12px;
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    margin-bottom: 0;
-    font-style: italic;
+table.preparation tr {
+    margin: 30;
+    padding-top: 30;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+
+
+
+/* PC SECTION */
+
+@media only screen and (min-width: 768px) {
+    div.contenu {
+        margin: 60px 10% 80px 10%;
+        padding: 0px 30px 30px 30px;
+        min-width: 350px;
+
+        /*
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        */
+    }
+
+    table.infos {
+        height: 80px
+    }
+    table.infos td {
+        font-size: 13px;
+    }
+    
+    table.infos th {
+        font-size: 16px;
+    }
+    
+    div.colonne {
+        width: 45%;
+    }
+    
+    div.colonne1 {
+        display: inline-block;
+        margin-right: 10%;
+    }
+    
+    div.colonne2 {
+        float: right;
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    div.contenu {
+        margin-left: auto;
+        margin-right: auto;
+        width: 650px;
+
+
+    }
 }
